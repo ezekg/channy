@@ -1,4 +1,5 @@
-# channy [![Build Status](https://travis-ci.org/ezekg/channy.svg?branch=master)](https://travis-ci.org/ezekg/channy)
+# channy
+[![Travis](https://img.shields.io/travis/ezekg/channy.svg?style=flat-square)](https://travis-ci.org/ezekg/channy)
 
 ## Install
 
