@@ -11,7 +11,7 @@ $ npm install channy --save
 See inline documentation for additional details.
 
 ```coffee
-chan = require "chan"
+chan = require "channy"
 
 chan.join "chan:channy", (x) ->
   console.log "hello, #{x}"
