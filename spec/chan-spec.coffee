@@ -49,6 +49,18 @@ describe "Channel", ->
       chan.message "chan:message"
       chai.expect(message).to.equal "hello world"
 
+    it "should message a channel with an argument", ->
+      message = null
+      chan.join "chan:message", (a) -> message = "hello #{a}"
+      chan.message "chan:message", "world"
+      chai.expect(message).to.equal "hello world"
+
+    it "should message a channel with many arguments", ->
+      message = null
+      chan.join "chan:message", (a, b, c) -> message = "hello #{a}, #{b}, and #{c}"
+      chan.message "chan:message", "sky", "world", "universe"
+      chai.expect(message).to.equal "hello sky, world and universe"
+
     it "should message many channels", ->
       messages = []
       chan.join "chan:messages", -> messages.push "hello a"
