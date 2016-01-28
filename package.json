@@ -4,7 +4,8 @@
   "description": "Channy is a Go channel-like observer that allows easy orchestration of arbitrary events",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node_modules/.bin/coffee -b -o dist/ -c src/chan.coffee",
+    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register spec/chan-spec.coffee"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/ezekg/channy/issues"
   },
-  "homepage": "https://github.com/ezekg/channy#readme"
+  "homepage": "https://github.com/ezekg/channy#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coffee-script": "^1.10.0"
+  }
 }
