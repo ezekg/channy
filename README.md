@@ -8,6 +8,8 @@ $ npm install channy --save
 ```
 
 ## Usage
+See inline documentation for additional details.
+
 ```coffee
 chan = require "chan"
 
