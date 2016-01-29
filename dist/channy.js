@@ -6,13 +6,13 @@
  * name should be namespaced (for example, "namespace:event"). A channel may be
  * closed at any time, leaving all existing callbacks for it to be forgotten.
  */
-var Channel,
+var Channy,
   slice = [].slice;
 
-module.exports = Channel = (function() {
-  function Channel() {}
+module.exports = Channy = (function() {
+  function Channy() {}
 
-  Channel._chans = {};
+  Channy._chans = {};
 
 
   /*
@@ -23,7 +23,7 @@ module.exports = Channel = (function() {
    * @return {Void}
    */
 
-  Channel.open = function(chan) {
+  Channy.open = function(chan) {
     var base;
     return (base = this._chans)[chan] != null ? base[chan] : base[chan] = [];
   };
@@ -37,7 +37,7 @@ module.exports = Channel = (function() {
    * @return {Void}
    */
 
-  Channel.close = function(chan) {
+  Channy.close = function(chan) {
     var tmp;
     tmp = this._chans;
     delete tmp[chan];
@@ -55,7 +55,7 @@ module.exports = Channel = (function() {
    * @return {Func} callback
    */
 
-  Channel.join = function(chan, callback) {
+  Channy.join = function(chan, callback) {
     this.open(chan);
     this._chans[chan].push(callback);
     return callback;
@@ -72,7 +72,7 @@ module.exports = Channel = (function() {
    * @return {Arr} Array containing the removed callback(s).
    */
 
-  Channel.leave = function(chan, callback) {
+  Channy.leave = function(chan, callback) {
     var ref;
     if ((ref = this._chans[chan]) != null) {
       ref.splice(this._chans[chan].indexOf(callback), 1);
@@ -92,7 +92,7 @@ module.exports = Channel = (function() {
    * @return {*} Return value of callback.
    */
 
-  Channel.message = function() {
+  Channy.message = function() {
     var args, callback, chan, i, len, ref, results;
     chan = arguments[0], args = 2 <= arguments.length ? slice.call(arguments, 1) : [];
     if (!this._chans[chan]) {
@@ -107,6 +107,6 @@ module.exports = Channel = (function() {
     return results;
   };
 
-  return Channel;
+  return Channy;
 
 })();

@@ -6,7 +6,7 @@
 # closed at any time, leaving all existing callbacks for it to be forgotten.
 ###
 module.exports =
-class Channel
+class Channy
   @_chans: {}
 
   ###
