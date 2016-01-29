@@ -2,10 +2,10 @@
   "name": "channy",
   "version": "0.1.0",
   "description": "Channy is a Go channel-like observer that allows easy orchestration of arbitrary events",
-  "main": "index.js",
+  "main": "dist/channy.js",
   "scripts": {
-    "build": "node_modules/.bin/coffee -b -o dist/ -c src/chan.coffee",
-    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register spec/chan-spec.coffee"
+    "build": "node_modules/.bin/coffee -b -o dist/ -c src/channy.coffee",
+    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register spec/channy-spec.coffee"
   },
   "repository": {
     "type": "git",

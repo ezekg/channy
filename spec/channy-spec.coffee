@@ -1,4 +1,4 @@
-chan = require "../src/chan"
+chan = require "../src/channy"
 chai = require "chai"
 
 describe "Channel", ->
@@ -57,7 +57,7 @@ describe "Channel", ->
 
     it "should message a channel with many arguments", ->
       message = null
-      chan.join "chan:message", (a, b, c) -> message = "hello #{a}, #{b}, and #{c}"
+      chan.join "chan:message", (a, b, c) -> message = "hello #{a}, #{b} and #{c}"
       chan.message "chan:message", "sky", "world", "universe"
       chai.expect(message).to.equal "hello sky, world and universe"
 
