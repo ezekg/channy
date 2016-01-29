@@ -1,7 +1,7 @@
 chan = require "../src/channy"
 chai = require "chai"
 
-describe "Channel", ->
+describe "Channy", ->
   beforeEach -> chan._chans = {}
 
   describe "open", ->
