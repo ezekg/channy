@@ -5,8 +5,8 @@
 
 `channy` is a Go channel-like observer that allows easy orchestration of arbitrary
 events. It lets you to get rid of binding events to DOM elements (because those
-aren't very reusable across elements), and instead, to let `channy` message the
-members of a channel.
+aren't very reusable across an application), and instead, lets `channy` message
+the members of a channel, executing all of the callbacks that have joined.
 
 As stated above, this is loosely based on the _flow_ associated with Go's channels.
 I use this library for most of my projects, so I figured I should stop copying
