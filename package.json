@@ -21,6 +21,12 @@
     "channel",
     "go"
   ],
+  "ignore": [
+    "**/.*",
+    "spec/*",
+    "src/*",
+    "*.json"
+  ],
   "author": "Ezekiel Gabrielse",
   "license": "MIT",
   "bugs": {

@@ -16,6 +16,12 @@
     "channel",
     "go"
   ],
+  "ignore": [
+    "**/.*",
+    "spec/*",
+    "src/*",
+    "*.json"
+  ],
   "author": "Ezekiel Gabrielse",
   "license": "MIT",
   "homepage": "https://github.com/ezekg/channy#readme"
