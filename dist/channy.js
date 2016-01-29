@@ -16,9 +16,9 @@ module.exports = Channy = (function() {
 
 
   /*
-   * Open up an empty channel
+   * Open up an empty channel.
    *
-   * @param {Str} chan - Channel to close
+   * @param {Str} chan - Channel to close.
    *
    * @return {Void}
    */
@@ -30,7 +30,7 @@ module.exports = Channy = (function() {
 
 
   /*
-   * Close a channel
+   * Close a channel.
    *
    * @param {Str} chan - Channel to close.
    *

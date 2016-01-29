@@ -10,9 +10,9 @@ class Channy
   @_chans: {}
 
   ###
-  # Open up an empty channel
+  # Open up an empty channel.
   #
-  # @param {Str} chan - Channel to close
+  # @param {Str} chan - Channel to close.
   #
   # @return {Void}
   ###
@@ -20,7 +20,7 @@ class Channy
     @_chans[chan] ?= []
 
   ###
-  # Close a channel
+  # Close a channel.
   #
   # @param {Str} chan - Channel to close.
   #
