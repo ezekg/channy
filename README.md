@@ -10,13 +10,62 @@ $ npm install channy --save
 ```
 
 ## Usage
-See inline documentation for additional details.
+`Channy` is a static class, so you don't need to instantiate it with `new`. See
+inline documentation for additional details on what each method does.
 
 ```coffee
 chan = require "channy"
 
 chan.join "chan:channy", (x) ->
   console.log "hello, #{x}"
+
+chan.message "chan:channy", "channy"
+# console.log => "hello, channy"
+```
+
+#### Open a channel
+Open up an empty channel. `open()` takes a channel name and returns `void`.
+
+```coffee
+chan.open "a:channel"
+```
+
+#### Close a channel
+Close a channel. `close()` takes a channel name and returns `void`.
+
+```coffee
+chan.close "a:channel"
+```
+
+#### Join a channel
+Join a channel. This will automaticcaly create the channel if it doesn't already
+exist. `Channy.join()` takes a channel name and callback function and returns
+`void`.
+
+```coffee
+chan.join "a:channel", (args...) -> # ...
+```
+
+#### Leave a channel
+Leave a channel. This will automatically close the channel if no subscribers
+exist for it. `Channy.leave()` takes a channel name and callback function
+and returns `void`.
+
+```coffee
+callback = -> # ...
+
+chan.join "a:channel", callback
+
+chan.leave "a:channel", callback
+```
+
+#### Message a channel
+Send a message to a channel, executing all callbacks currently subscribed.
+`Channy.message()` takes a channel name an infinite number of arguments to be
+passed to the callback function, and returns `void`.
+
+```coffee
+chan.join "chan:channy", (x) -> console.log "hello, #{x}"
 
 chan.message "chan:channy", "channy"
 # console.log => "hello, channy"
