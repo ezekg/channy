@@ -46,7 +46,7 @@ module.exports = Channy = (function() {
 
 
   /*
-   * Join a channel. This will automaticcaly create the channel if it doesn't
+   * Join a channel. This will automatically create the channel if it doesn't
    * already exist.
    *
    * @param {Str}  chan     - Channel to join.
