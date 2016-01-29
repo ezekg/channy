@@ -1,8 +1,8 @@
 "use strict"
 
 ###
-# Channel is a static class responsible for managing global channels. A channel
-# name should be namespaced (for example, "namespace:event"). A channel may be
+# Channy is a static class responsible for managing global channels. A channel
+# name should be namespaced (for example, "namespace:channel"). A channel may be
 # closed at any time, leaving all existing callbacks for it to be forgotten.
 ###
 module.exports =

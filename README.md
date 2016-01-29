@@ -1,9 +1,9 @@
-# channy
+# `channy`
 [![Travis](https://img.shields.io/travis/ezekg/channy.svg?style=flat-square)](https://travis-ci.org/ezekg/channy)
 [![NPM](https://img.shields.io/npm/v/channy.svg?style=flat-square)](https://www.npmjs.com/package/channy)
 [![Bower](https://img.shields.io/bower/v/channy.svg?style=flat-square)](http://bower.io/search/?q=channy)
 
-Channy is a Go channel-like observer that allows easy orchestration of arbitrary events.
+`channy` is a Go channel-like observer that allows easy orchestration of arbitrary events.
 
 ## Install
 ```
@@ -16,9 +16,11 @@ bower install channy --save
 ```
 
 ## Usage
-`Channy` is a static class, so you don't need to instantiate it with `new`. See
-inline documentation for detailed breakdowns on what each method does, otherwise
-see below for basic usage.
+`channy` is a static class, so you don't need to instantiate it with `new`. It
+is responsible for managing global channels. A channel name should be namespaced
+(for example, "namespace:channel"). See [inline documentation](src/channy.coffee)
+for detailed breakdowns on what each method does, otherwise see below for
+some basic usage.
 
 ```coffee
 chan = require "channy"
