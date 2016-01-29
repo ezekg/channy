@@ -21,6 +21,15 @@ describe "Channy", ->
       chai.expect chan._chans
         .to.not.have.key "chan:close"
 
+    it "should not close all channels", ->
+      chan.open "chan:keep-open"
+      chan.open "chan:close"
+      chan.close "chan:close"
+      chai.expect Object.keys(chan._chans).length
+        .to.not.equal 0
+      chai.expect chan._chans
+        .to.have.key "chan:keep-open"
+
   describe "join", ->
     it "should join and open a channel", ->
       chan.join "chan:join+open", -> null
