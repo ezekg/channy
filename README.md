@@ -24,14 +24,14 @@ chan.message "chan:channy", "channy"
 ```
 
 #### Open a channel
-Open up an empty channel. `open()` takes a channel name and returns `void`.
+Open up an empty channel. `open` takes a channel name and returns `void`.
 
 ```coffee
 chan.open "a:channel"
 ```
 
 #### Close a channel
-Close a channel. `close()` takes a channel name and returns `void`.
+Close a channel. `close` takes a channel name and returns `void`.
 
 ```coffee
 chan.close "a:channel"
@@ -39,7 +39,7 @@ chan.close "a:channel"
 
 #### Join a channel
 Join a channel. This will automaticcaly create the channel if it doesn't already
-exist. `Channy.join()` takes a channel name and callback function and returns
+exist. `join` takes a channel name and callback function and returns
 `void`.
 
 ```coffee
@@ -48,7 +48,7 @@ chan.join "a:channel", (args...) -> # ...
 
 #### Leave a channel
 Leave a channel. This will automatically close the channel if no subscribers
-exist for it. `Channy.leave()` takes a channel name and callback function
+exist for it. `leave` takes a channel name and callback function
 and returns `void`.
 
 ```coffee
@@ -61,7 +61,7 @@ chan.leave "a:channel", callback
 
 #### Message a channel
 Send a message to a channel, executing all callbacks currently subscribed.
-`Channy.message()` takes a channel name an infinite number of arguments to be
+`message` takes a channel name an infinite number of arguments to be
 passed to the callback function, and returns `void`.
 
 ```coffee
