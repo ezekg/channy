@@ -1,8 +1,9 @@
 # channy
 [![Travis](https://img.shields.io/travis/ezekg/channy.svg?style=flat-square)](https://travis-ci.org/ezekg/channy)
 
-## Install
+Channy is a Go channel-like observer that allows easy orchestration of arbitrary events.
 
+## Install
 ```
 $ npm install channy --save
 ```
