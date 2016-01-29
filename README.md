@@ -81,10 +81,13 @@ Send a message to a channel, executing all callbacks currently subscribed.
 passed to the callback function, and returns `void`.
 
 ```coffee
-chan.join "chan:channy", (x) -> console.log "hello, #{x}"
+chan.join "a:channel", (x) -> console.log "hello, #{x}"
 
-chan.message "chan:channy", "channy"
+chan.message "a:channel", "channy"
 # console.log => "hello, channy"
+
+chan.message "a:channel", "manny"
+# console.log => "hello, manny"
 ```
 
 ## License
