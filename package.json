@@ -5,6 +5,7 @@
   "main": "dist/channy.js",
   "scripts": {
     "build": "coffee -b -o dist/ -c src/channy.coffee",
+    "postbuild": "sed 's/module.exports/window.channy/' dist/channy.js > dist/channy.pkg.js",
     "test": "mocha --compilers coffee:coffee-script/register spec/channy-spec.coffee"
   },
   "repository": {

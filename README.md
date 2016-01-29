@@ -6,7 +6,12 @@ Channy is a Go channel-like observer that allows easy orchestration of arbitrary
 
 ## Install
 ```
-$ npm install channy --save
+npm install channy --save
+```
+
+Or with Bower,
+```
+bower install channy --save
 ```
 
 ## Usage
