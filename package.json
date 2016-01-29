@@ -1,6 +1,6 @@
 {
   "name": "channy",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Channy is a Go channel-like observer that allows easy orchestration of arbitrary events",
   "main": "dist/channy.js",
   "scripts": {
