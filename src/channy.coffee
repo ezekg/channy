@@ -47,7 +47,7 @@ class Channy
 
   ###
   # Leave a channel. This will automatically close the channel if no subscribers
-  # exist for it.
+  # currently exist for it.
   #
   # @param {Str}  chan     - Channel to leave.
   # @param {Func} callback - Callback to remove.

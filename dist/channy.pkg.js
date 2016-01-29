@@ -64,22 +64,21 @@ window.channy = Channy = (function() {
 
   /*
    * Leave a channel. This will automatically close the channel if no subscribers
-   * exist for it.
+   * currently exist for it.
    *
    * @param {Str}  chan     - Channel to leave.
    * @param {Func} callback - Callback to remove.
    *
-   * @return {Arr} Array containing the removed callback(s).
+   * @return {Arr} Array containing the removed callback.
    */
 
   Channy.leave = function(chan, callback) {
-    var ref;
-    if ((ref = this._chans[chan]) != null) {
-      ref.splice(this._chans[chan].indexOf(callback), 1);
-    }
+    var callbacks, ref;
+    callbacks = (ref = this._chans[chan]) != null ? ref.splice(this._chans[chan].indexOf(callback), 1) : void 0;
     if (!this._chans[chan].length) {
-      return this.close(chan);
+      this.close(chan);
     }
+    return callbacks;
   };
 
 

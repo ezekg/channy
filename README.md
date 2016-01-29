@@ -3,7 +3,12 @@
 [![NPM](https://img.shields.io/npm/v/channy.svg?style=flat-square)](https://www.npmjs.com/package/channy)
 [![Bower](https://img.shields.io/bower/v/channy.svg?style=flat-square)](http://bower.io/search/?q=channy)
 
-`channy` is a Go channel-like observer that allows easy orchestration of arbitrary events.
+`channy` is a Go channel-like observer that allows easy orchestration of arbitrary
+events. It lets you to get rid of binding events to DOM elements (because those
+aren't very reusable across elements), and instead, to let `channy` message the
+members of a channel. As stated above, this is loosely based on the _flow_ associated
+with Go's channels. I use this library for most of my projects, so I thought
+I'd stop copying and pasting it and also keep it nice and versioned. :+1:
 
 ## Install
 ```
@@ -47,7 +52,7 @@ chan.close "a:channel"
 ```
 
 #### Join a channel
-Join a channel. This will automaticcaly create the channel if it doesn't already
+Join a channel. This will automatically create the channel if it doesn't already
 exist. `join` takes a channel name and callback function and returns
 `void`.
 
@@ -57,7 +62,7 @@ chan.join "a:channel", (args...) -> # ...
 
 #### Leave a channel
 Leave a channel. This will automatically close the channel if no subscribers
-exist for it. `leave` takes a channel name and callback function
+currently exist for it. `leave` takes a channel name and callback function
 and returns `void`.
 
 ```coffee
