@@ -70,7 +70,7 @@ chan.leave "a:channel", callback
 
 #### Message a channel
 Send a message to a channel, executing all callbacks currently subscribed.
-`message` takes a channel name an infinite number of arguments to be
+`message` takes a channel name and an infinite number of arguments to be
 passed to the callback function, and returns `void`.
 
 ```coffee
