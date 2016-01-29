@@ -5,7 +5,7 @@
   "main": "dist/channy.js",
   "scripts": {
     "build": "node_modules/.bin/coffee -b -o dist/ -c src/channy.coffee",
-    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register spec/channy-spec.coffee"
+    "test": "mocha --compilers coffee:coffee-script/register spec/channy-spec.coffee"
   },
   "repository": {
     "type": "git",
