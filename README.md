@@ -1,5 +1,6 @@
 # channy
 [![Travis](https://img.shields.io/travis/ezekg/channy.svg?style=flat-square)](https://travis-ci.org/ezekg/channy)
+[![NPM](https://img.shields.io/npm/v/channy.svg?style=flat-square)](https://www.npmjs.com/package/channy)
 
 Channy is a Go channel-like observer that allows easy orchestration of arbitrary events.
 
