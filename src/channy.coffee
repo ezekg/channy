@@ -52,11 +52,12 @@ class Channy
   # @param {Str}  chan     - Channel to leave.
   # @param {Func} callback - Callback to remove.
   #
-  # @return {Arr} Array containing the removed callback(s).
+  # @return {Arr} Array containing the removed callback.
   ###
   @leave: (chan, callback) ->
-    @_chans[chan]?.splice @_chans[chan].indexOf(callback), 1
+    callbacks = @_chans[chan]?.splice @_chans[chan].indexOf(callback), 1
     @.close chan unless @_chans[chan].length
+    callbacks
 
   ###
   # Send a message to a channel, executing all callbacks currently subscribed.
