@@ -7,8 +7,8 @@
 events. It lets you to get rid of binding events to DOM elements (because those
 aren't very reusable across elements), and instead, to let `channy` message the
 members of a channel. As stated above, this is loosely based on the _flow_ associated
-with Go's channels. I use this library for most of my projects, so I thought
-I'd stop copying and pasting it and also keep it nice and versioned. :+1:
+with Go's channels. I use this library for most of my projects, so I figured I
+should stop copying and pasting it and keep it nice and versioned. :+1:
 
 ## Install
 ```
