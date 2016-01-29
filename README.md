@@ -17,7 +17,8 @@ bower install channy --save
 
 ## Usage
 `Channy` is a static class, so you don't need to instantiate it with `new`. See
-inline documentation for additional details on what each method does.
+inline documentation for detailed breakdowns on what each method does, otherwise
+see below for basic usage.
 
 ```coffee
 chan = require "channy"
