@@ -17,7 +17,7 @@ and pasting it and start keeping it nice and versioned. :+1:
 npm install channy --save
 ```
 
-Or with Bower,
+Or with Bower (use `dist/channy.pkg.js` in browserland),
 ```
 bower install channy --save
 ```
