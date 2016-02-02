@@ -12,7 +12,7 @@ class Channy
   ###
   # Open up an empty channel.
   #
-  # @param {Str} chan - Channel to close.
+  # @param {Str} chan - Channel to open.
   #
   # @return {Void}
   ###
@@ -60,7 +60,8 @@ class Channy
     callbacks
 
   ###
-  # Send a message to a channel, executing all callbacks currently subscribed.
+  # Send a message to a channel. This executes all callbacks currently
+  # subscribed to the channel.
   #
   # @param {Str} chan - Channel to message.
   # @param {*}   args - Arguments to pass to callback.
