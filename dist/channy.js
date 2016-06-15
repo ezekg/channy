@@ -57,6 +57,9 @@
      */
 
     Channy.join = function(chan, callback) {
+      if (typeof callback !== "function") {
+        return false;
+      }
       this.open(chan);
       this._chans[chan].push(callback);
       return callback;
@@ -74,8 +77,15 @@
      */
 
     Channy.leave = function(chan, callback) {
-      var callbacks, ref;
-      callbacks = (ref = this._chans[chan]) != null ? ref.splice(this._chans[chan].indexOf(callback), 1) : void 0;
+      var callbacks, index, ref;
+      if (typeof callback !== "function") {
+        return false;
+      }
+      index = this._chans[chan].indexOf(callback);
+      if (!(index >= 0)) {
+        return false;
+      }
+      callbacks = (ref = this._chans[chan]) != null ? ref.splice(index, 1) : void 0;
       if (!this._chans[chan].length) {
         this.close(chan);
       }

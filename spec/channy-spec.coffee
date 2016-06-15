@@ -43,6 +43,14 @@ describe "Channy", ->
       chai.expect chan._chans["chan:join"].indexOf f
         .to.equal 0
 
+    it "should not allow non-funcs to join a channel", ->
+      a = chan.join "chan:join", null
+      b = chan.join "chan:join", "string"
+      c = chan.join "chan:join", 1
+      chai.expect(a).to.equal false
+      chai.expect(b).to.equal false
+      chai.expect(c).to.equal false
+
   describe "leave", ->
     it "should leave a channel", ->
       chan.join "chan:leave", f = -> null
@@ -50,6 +58,14 @@ describe "Channy", ->
       chan.leave "chan:leave", f
       chai.expect chan._chans["chan:leave"].indexOf f
         .to.equal -1
+
+    it "should not allow non-funcs to leave a channel", ->
+      a = chan.join "chan:leave", null
+      b = chan.join "chan:leave", "string"
+      c = chan.join "chan:leave", 1
+      chai.expect(a).to.equal false
+      chai.expect(b).to.equal false
+      chai.expect(c).to.equal false
 
   describe "message", ->
     it "should message a channel", ->

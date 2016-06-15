@@ -41,6 +41,7 @@ class Channy
   # @return {Func} callback
   ###
   @join: (chan, callback) ->
+    return false unless typeof callback is "function"
     @.open chan
     @_chans[chan].push callback
     callback
@@ -55,7 +56,10 @@ class Channy
   # @return {Arr} Array containing the removed callback.
   ###
   @leave: (chan, callback) ->
-    callbacks = @_chans[chan]?.splice @_chans[chan].indexOf(callback), 1
+    return false unless typeof callback is "function"
+    index = @_chans[chan].indexOf callback
+    return false unless index >= 0
+    callbacks = @_chans[chan]?.splice index, 1
     @.close chan unless @_chans[chan].length
     callbacks
 
